@@ -7,16 +7,16 @@
    </head>
    <body>
    <!-- Создается табличка с параметрами -->
-<table width="690" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" class="main_border">
+<table width="690px" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" class="main_border">
 	<tr>
-		<td><img src="img/header.jpg" width="690" height="100"></td>
+		<td colspan="2"><img src="img/header.jpg" width="690px" height="100px"></td>
 	</tr>
 	<tr>
 		<td width="182px" valign="top" class="left">1</td>
 		<td>1</td>
 	</tr>
 	<tr>
-		<td><img src="img/footer.jpg" width="690" height="18"></td>
+		<td colspan="2"><img src="img/footer.jpg" width="690px" height="18px"></td>
 	</tr>
 </table>  
       
