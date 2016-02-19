@@ -9,13 +9,14 @@
    <!-- Создается табличка с параметрами -->
 <table width="690" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" class="main_border">
 	<tr>
-		<td border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" class="main_border">q</td>
+		<td><img src="img/header.jpg" width="690" height="100"></td>
 	</tr>
 	<tr>
-		<td>q</td>
+		<td width="182px" valign="top" class="left">1</td>
+		<td>1</td>
 	</tr>
 	<tr>
-		<td border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" class="main_border">q</td>
+		<td><img src="img/footer.jpg" width="690" height="18"></td>
 	</tr>
 </table>  
       
