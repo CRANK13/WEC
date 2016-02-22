@@ -21,11 +21,10 @@ $myrow = mysql_fetch_array($result);
 	<tr>
 <!-- Подключаем левый блок сайта -->
 <?php include ("blocks/lefttd.php");?>			
-		<td valign="top"></td>
+		<td valign="top"><?php print $myrow['text'];?></td>
 	</tr>
-	<tr>
-		<td colspan="2"><img src="img/footer.jpg" width="690px" height="18px"></td>
-	</tr>
+<!-- Подключаем нижний графический елемент -->
+<?php include("blocks/footer.php");?>
 </table>  
       
    </body>
