@@ -1,4 +1,4 @@
-<td width="182px" valign="top" class="left">
+<td rowspan="3" width="182px" valign="top" class="left">
 <!-- Код на меню навигации -->
 <p align="center" class="title">Навигация</p>
 <div id="coolmenu">

@@ -41,3 +41,6 @@ width: auto;
 background-color: #cccccc; /*Фоновый цвет ячейки при наведение курсора*/
 color: #000000;  /*Цвет текста при наведении курсора*/
 }
+
+.news {border: 1px solid #cccccc; width: 95%;}
+.news_title {background-color: #f6f6f6;}
