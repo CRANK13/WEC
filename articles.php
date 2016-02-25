@@ -20,16 +20,30 @@ $myrow = mysql_fetch_array($result);
 <?php include("blocks/header.php");?>
 
 <!-- Подключаем левый блок сайта -->
-<?php include ("blocks/lefttd.php");?>
-		<td valign="top"><?php print $myrow['text'];?></td>
-		<tr>
-         <td></td>
+<?php include ("blocks/lefttd.php");?>			
+		<td valign="top" class="news"><p><?php print $myrow['text'];?></p></td>
+      
+      <!-- Вытащили в переменную результ данные по всем урокам -->
+      <?php 
+   /*Запрос в базу*/   $result = mysql_query("SELECT id, title,description,author,date FROM articles",$db);
+   /*Помещаються данные по первому уроку*/   $myrow = mysql_fetch_array($result);
+   /*Создаем цикл*/   do {      
+
+/*Выводим табличку по первому уроку*/printf(" <tr>
+         <td class='news_title'><a href='view_articles.php? id=%s'>
+         <p class='news_name'>%s</a></p>
+         <p class='news_adds'>Дата добавления: %s</p>
+         <p class='news_adds'>Автор статьи: %s</p></td>
       </tr>
       <tr>
-         <td></td>
-      </tr>
+         <td class='news'>%s<br><br><br></td>
+      </tr>",$myrow["id"],$myrow["title"],$myrow["date"],$myrow["author"],$myrow["description"]);
+      }
+   /*Нужно выполнять цыкл, пока это значение - истина.*/
+      while ($myrow = mysql_fetch_array($result));
+?>     
 <!-- Подключаем нижний графический елемент -->
-<?php include("blocks/footer_views_news.php");?>
+<?php include("blocks/footer.php");?>
 </table>  
       
    </body>

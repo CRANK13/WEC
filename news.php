@@ -36,7 +36,7 @@ $myrow = mysql_fetch_array($result);
          <p class='news_adds'>Автор новости: %s</p></td>
       </tr>
       <tr>
-         <td class='news'>%s<br><br></td>
+         <td class='news'>%s<br><br><br></td>
       </tr>",$myrow["id"],$myrow["title"],$myrow["date"],$myrow["author"],$myrow["description"]);
       }
    /*Нужно выполнять цыкл, пока это значение - истина.*/
