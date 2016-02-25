@@ -42,5 +42,8 @@ background-color: #cccccc; /*Фоновый цвет ячейки при нав�
 color: #000000;  /*Цвет текста при наведении курсора*/
 }
 
-.news {border: 1px solid #cccccc; width: 95%;}
-.news_title {background-color: #f6f6f6;}
+.news {border: 1px solid #cccccc;}/*Значение таблички что выводиться*/
+.news_title {background-color: #f6f6f6;}/*Значени абзаца на новость*/
+
+.news_name {font-weight: bold; margin-top: 7px; margin-bottom: 7px;}/*Значения для названия новости*/
+.news_adds {font-size: 11px; margin-top: 7px; margin-bottom: 7px; color: #424242;}/*Значения для дополнительных показаний*/
