@@ -1,0 +1,19 @@
+<!-- Вытащили в переменную результ данные по всем урокам -->
+      <?php 
+   /*Запрос в базу*/   $result = mysql_query("SELECT id, title,description,author,date FROM news",$db);
+   /*Помещаються данные по первому уроку*/   $myrow = mysql_fetch_array($result);
+   /*Создаем цикл*/   do {      
+
+/*Выводим табличку по первому уроку*/printf(" <tr>
+         <td class='news_title'><a href='view_news.php? id=%s'>
+         <p class='news_name'>%s</a></p>
+         <p class='news_adds'>Дата добавления: %s</p>
+         <p class='news_adds'>Автор новости: %s</p></td>
+      </tr>
+      <tr>
+         <td class='news'>%s<br><br></td>
+      </tr>",$myrow["id"],$myrow["title"],$myrow["date"],$myrow["author"],$myrow["description"]);
+      }
+   /*Нужно выполнять цыкл, пока это значение - истина.*/
+      while ($myrow = mysql_fetch_array($result));
+?>

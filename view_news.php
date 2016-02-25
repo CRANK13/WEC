@@ -1,13 +1,16 @@
 <?php
 $db = mysql_connect("localhost","wec","12345");
 mysql_select_db("wec.loc",$db);/*Соединяемся с базой*/
-$result = mysql_query("SELECT title, meta_d, meta_k, text FROM settings WHERE page='contacts'",$db);
-$myrow = mysql_fetch_array($result);
+
+if (isset($_GET['id'])) {$id = $_GET['id'];}
+
+$result = mysql_query("SELECT * FROM news WHERE id='$id'",$db);
+$myrow = mysql_fetch_array($result);/*Как массив вытащили*/
 ?>
 <!DOCTYPE html>
 <html>
    <head>
-      <title>О нас</title><!-- Название на вкладке -->
+      <title>Новости</title><!-- Название на вкладке -->
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><!-- Обязательно должно присутствовать -->
       <link href="style.css" rel="stylesheet" type="text/css"><!-- Подключение к файлу сss -->
       <meta name="description" content="<?php print $myrow ['meta_d']; ?>">
@@ -20,14 +23,14 @@ $myrow = mysql_fetch_array($result);
 <?php include("blocks/header.php");?>
 
 <!-- Подключаем левый блок сайта -->
-<?php include ("blocks/lefttd.php");?>
-		<td valign="top"><?php print $myrow['text'];?></td>
-	  <tr>
-         <td></td>
-      </tr>
-      <tr>
-         <td></td>
-      </tr>
+<?php include ("blocks/lefttd.php");?>			
+		<td valign="top" class="news">
+      <p class="view_title"><?php print $myrow['title'];?></p>
+      <p class="view_date">Дата добавления: <?php print $myrow['date'];?></p>
+      <p class="view_date">Автор: <?php print $myrow['author'];?></p>
+      <p class="view_date"><?php print $myrow['text'];?></p>
+      </td>
+           
 <!-- Подключаем нижний графический елемент -->
 <?php include("blocks/footer_views_news.php");?>
 </table>  

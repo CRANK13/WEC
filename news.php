@@ -21,7 +21,7 @@ $myrow = mysql_fetch_array($result);
 
 <!-- Подключаем левый блок сайта -->
 <?php include ("blocks/lefttd.php");?>			
-		<td valign="top"><p><?php print $myrow['text'];?></p></td>
+		<td valign="top" class="news"><p><?php print $myrow['text'];?></p></td>
       
       <!-- Вытащили в переменную результ данные по всем урокам -->
       <?php 

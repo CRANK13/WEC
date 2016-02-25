@@ -23,13 +23,13 @@ $myrow = mysql_fetch_array($result);
 <?php include ("blocks/lefttd.php");?>
 		<td valign="top"><?php print $myrow['text'];?></td>
 		<tr>
-         <td>2</td>
+         <td></td>
       </tr>
       <tr>
-         <td>3</td>
+         <td></td>
       </tr>
 <!-- Подключаем нижний графический елемент -->
-<?php include("blocks/footer.php");?>
+<?php include("blocks/footer_views_news.php");?>
 </table>  
       
    </body>
