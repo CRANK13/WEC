@@ -18,11 +18,16 @@ $myrow = mysql_fetch_array($result);
 <table width="690px" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" class="main_border">
 <!-- Подключаем шапку сайта -->
 <?php include("blocks/header.php");?>
-	<tr>
+
 <!-- Подключаем левый блок сайта -->
 <?php include ("blocks/lefttd.php");?>
 		<td valign="top"><?php print $myrow['text'];?></td>
-	</tr>
+	  <tr>
+         <td>2</td>
+      </tr>
+      <tr>
+         <td>3</td>
+      </tr>
 <!-- Подключаем нижний графический елемент -->
 <?php include("blocks/footer.php");?>
 </table>  
