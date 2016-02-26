@@ -13,7 +13,7 @@
 
 <!-- Подключаем левый блок сайта -->
 <?php include ("blocks/lefttd.php");?>
-		<td valign="top">Добро пожаловать в админку</td>
+		<td valign="top"></td>
 		<tr>
          <td></td>
       </tr>
